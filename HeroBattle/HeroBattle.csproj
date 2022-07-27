@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
+    <PropertyGroup>
+         <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
     <ProjectGuid>{883EFEAF-0F39-4AAB-8709-C42C51F77620}</ProjectGuid>
@@ -43,6 +46,7 @@
     <Compile Include="Services\Implementations\ArmorSuperPowerService.cs" />
     <Compile Include="Services\Implementations\DamageSuperPowerService.cs" />
     <Compile Include="Battle.cs" />
+    <Compile Include="BattleHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

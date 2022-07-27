@@ -14,5 +14,10 @@ namespace HeroBattle.Models.Heros
             power *= 2;
             base.AddSuperPower(powerService, power);
         }
+
+        public override string ToString()
+        {
+            return "Tor";
+        }
     }
 }
