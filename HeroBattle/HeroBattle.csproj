@@ -42,6 +42,7 @@
     <Compile Include="Services\Implementations\HPSuperPowerService.cs" />
     <Compile Include="Services\Implementations\ArmorSuperPowerService.cs" />
     <Compile Include="Services\Implementations\DamageSuperPowerService.cs" />
+    <Compile Include="Battle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
