@@ -11,9 +11,44 @@ namespace HeroBattle.Models
 
         public virtual int Damage { get; set; } = 10;
 
+        public bool IsAlive => HealthPoint > 0;
+
         public virtual void AddSuperPower(ISuperPowerService powerService, int power)
         {
             powerService.AddSuperPower(this, power);
+        }
+
+        public int Attack()
+        {
+            if (Armor > 0)
+                return Damage;
+            if (Damage == 1)
+                return 1;
+            return --Damage;
+        }
+
+        public void Defense(int power)
+        {
+            if (Armor > 0)
+            {
+                var check = power / 2;
+                if (check < Armor)
+                {
+                    Armor -= check;
+                }
+                else
+                {
+                    var ext = check - Armor;
+                    HealthPoint -= ext;
+                    Armor = 0;
+                }
+
+                HealthPoint -= (power - check);
+            }
+            else
+            {
+                HealthPoint -= power;
+            }
         }
     }
 }
