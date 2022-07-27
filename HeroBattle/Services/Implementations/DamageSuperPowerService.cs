@@ -7,7 +7,7 @@ namespace HeroBattle.Services.Implementations
     {
         public void AddSuperPower(BaseHero hero, int power)
         {
-            throw new NotImplementedException();
+            hero.Damage += power;
         }
     }
 }
