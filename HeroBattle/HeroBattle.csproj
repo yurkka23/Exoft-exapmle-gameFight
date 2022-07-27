@@ -38,10 +38,16 @@
     <Compile Include="Models\Heros\IronMan.cs" />
     <Compile Include="Models\Heros\Tor.cs" />
     <Compile Include="Models\Heros\CapitanAmerica.cs" />
+    <Compile Include="Services\ISuperPowerService.cs" />
+    <Compile Include="Services\Implementations\HPSuperPowerService.cs" />
+    <Compile Include="Services\Implementations\ArmorSuperPowerService.cs" />
+    <Compile Include="Services\Implementations\DamageSuperPowerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Models\Heros\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implementations\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
