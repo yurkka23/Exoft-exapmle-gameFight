@@ -50,5 +50,10 @@ namespace HeroBattle.Models
                 HealthPoint -= power;
             }
         }
+
+        public override string ToString()
+        {
+            return "Base Hero";
+        }
     }
 }
