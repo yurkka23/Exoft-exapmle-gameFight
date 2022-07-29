@@ -9,7 +9,7 @@ namespace HeroBattle.Models.Heros
 
         public override string ToString()
         {
-            return "Iron Man";
+            return $"Iron Man: Hp:{this.HealthPoint}  Demage:{this.Damage}  Armor:{this.Armor}";
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using HeroBattle.Services;
+using HeroBattle;
 
 namespace HeroBattle.Models
 {
@@ -53,7 +54,22 @@ namespace HeroBattle.Models
 
         public override string ToString()
         {
-            return "Base Hero";
+            return $"Base Hero: Hp:{this.HealthPoint}  Demage:{this.Damage}  Armor:{this.Armor}";
+        }
+
+        public static BaseHero operator +(BaseHero a, BaseHero b)
+        {
+            b.Damage += a.Damage;
+            b.Armor += a.Armor;
+            b.HealthPoint += a.HealthPoint;
+            return b;
+        }
+        public static BaseHero operator -(BaseHero a, BaseHero b)
+        {
+            b.Damage -= a.Damage;
+            b.Armor -= a.Armor;
+            b.HealthPoint -= a.HealthPoint;
+            return b;
         }
     }
 }

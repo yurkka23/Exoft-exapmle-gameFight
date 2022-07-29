@@ -5,7 +5,8 @@ namespace HeroBattle.Models.Heros
     {
         public override string ToString()
         {
-            return "Capitan America";
+            return $"Capitan America: Hp:{this.HealthPoint}  Demage:{this.Damage}  Armor:{this.Armor}";
         }
+     
     }
 }
